@@ -171,3 +171,264 @@
     .add-btn:hover{background:linear-gradient(135deg,var(--rose),var(--plum));color:#fff;border-color:transparent}
     .product-delete{display:block;width:100%;margin-top:.4rem;padding:.4rem;text-align:center;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;background:transparent;border:1px solid #e0c0c0;color:#c08080;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
     .product-delete:hover{background:#fff0f0;border
+
+    /* ══ UPLOAD PANEL ══ */
+    #upload-panel{background:linear-gradient(135deg,#fef5ee,#f5e8f5);border:2px dashed var(--border);padding:2.5rem;margin-top:3rem;text-align:center;transition:border-color .3s}
+    #upload-panel:hover{border-color:var(--rose)}
+    .upload-panel-title{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:.5rem;color:var(--plum)}
+    .upload-panel-sub{font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+    .upload-form{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;align-items:flex-end}
+    .upload-form input[type=text],.upload-form input[type=number]{padding:.7rem 1rem;border:1px solid var(--border);font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--dark);outline:none;width:170px;background:#fff}
+    .upload-form input:focus{border-color:var(--rose)}
+    .upload-file-label{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;background:var(--plum);color:#fff;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:background .2s}
+    .upload-file-label:hover{background:var(--plum2)}
+    #file-input{display:none}
+    .upload-preview{margin-top:1rem;font-size:.8rem;color:var(--muted)}
+    .upload-preview img{width:80px;height:80px;object-fit:cover;border-radius:2px;margin-top:.5rem;border:2px solid var(--border)}
+
+    /* WHY */
+    #why{background:linear-gradient(160deg,#f5e8f5 0%,var(--cream) 100%)}
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-top:3rem}
+    .why-item{text-align:center;padding:2.5rem 1.5rem;background:#fff;border:1px solid var(--border);transition:all .35s}
+    .why-item:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(74,21,53,.1);border-color:var(--rose)}
+    .why-icon{font-size:2.2rem;margin-bottom:1rem;display:block}
+    .why-title{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:.5rem}
+    .why-text{font-size:.82rem;color:var(--muted);line-height:1.7}
+
+    /* TESTIMONIALS */
+    #testimonials{background:linear-gradient(160deg,var(--dark),#2a0d1a);color:var(--cream)}
+    #testimonials .section-title{color:#fff}
+    #testimonials .section-label{color:var(--gold2)}
+    .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:3rem}
+    .testi-card{border:1px solid rgba(201,168,76,.2);padding:2.2rem;position:relative;background:rgba(255,255,255,.03);transition:all .35s}
+    .testi-card:hover{background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.4);transform:translateY(-3px)}
+    .testi-card::before{content:'"';font-family:'Playfair Display',serif;font-size:6rem;color:var(--rose);opacity:.2;position:absolute;top:-1.5rem;left:1.2rem;line-height:1}
+    .testi-text{font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.75)}
+    .testi-author{margin-top:1.2rem;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2)}
+    .stars{color:var(--gold);margin-bottom:.8rem;letter-spacing:.1em}
+
+    /* NEWSLETTER */
+    #newsletter{background:linear-gradient(135deg,#f9ede6,#f0e4f5);text-align:center}
+    .newsletter-box{max-width:540px;margin:0 auto}
+    .newsletter-box p{color:var(--muted);font-size:.9rem;line-height:1.7;margin-bottom:2rem}
+    .nl-form{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
+    .nl-form input{flex:1;min-width:220px;padding:.85rem 1.2rem;border:1px solid var(--border);background:#fff;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;color:var(--dark)}
+    .nl-form input:focus{border-color:var(--rose)}
+
+    /* FOOTER */
+    footer{background:linear-gradient(160deg,#1a0512,var(--dark));color:#c9a89c;padding:4rem 5% 2rem}
+    .footer-top{display:flex;flex-wrap:wrap;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
+    .footer-brand{flex:1;min-width:200px}
+    .footer-logo{font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;color:#fff}
+    .footer-logo span{color:var(--rose)}
+    .footer-tagline{font-size:.82rem;margin-top:.6rem;color:#6a4a42;line-height:1.7}
+    .footer-col h4{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem}
+    .footer-col ul{list-style:none}
+    .footer-col li{margin-bottom:.55rem}
+    .footer-col a{font-size:.84rem;color:#c9a89c;text-decoration:none;transition:color .2s}
+    .footer-col a:hover{color:var(--rose)}
+    .footer-bottom{margin-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.75rem;color:#4a2e28}
+
+    @media(max-width:640px){
+      nav{padding:1rem 4%}.nav-links{display:none}
+      .footer-top{flex-direction:column;gap:2rem}
+      .bridal-showcase{grid-template-columns:1fr}.bridal-hero-card{grid-row:auto}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Natkhat <span>Nx</span></a>
+  <ul class="nav-links">
+    <li><a href="#categories">Collections</a></li>
+    <li><a href="#bridal">Bridal</a></li>
+    <li><a href="#featured">New Arrivals</a></li>
+    <li><a href="#why">About</a></li>
+  </ul>
+  <a href="https://natkhat.com" class="nav-cta">Shop Now</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="mandala-bg"></div>
+  <div class="petal" style="left:12%;bottom:0;font-size:1.5rem;animation-duration:12s">🌸</div>
+  <div class="petal" style="left:28%;bottom:0;font-size:1rem;animation-duration:15s;animation-delay:3s">✿</div>
+  <div class="petal" style="left:72%;bottom:0;font-size:1.2rem;animation-duration:11s;animation-delay:1.5s">🌸</div>
+  <div class="petal" style="left:85%;bottom:0;font-size:.9rem;animation-duration:14s;animation-delay:5s">✿</div>
+  <div>
+    <p class="hero-eyebrow">✦ New Collection 2026 ✦</p>
+    <h1>Wear the <em>Art</em><br>of India</h1>
+    <p class="hero-sub">Handpicked ethnic wear that blends timeless craftsmanship with modern grace — because every woman deserves to feel extraordinary.</p>
+    <div class="hero-cta">
+      <a href="#bridal" class="btn btn-primary">Bridal Collection</a>
+      <a href="#featured" class="btn btn-outline">New Arrivals</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Designs</div></div>
+      <div class="stat-item"><div class="stat-num">10k+</div><div class="stat-label">Happy Brides</div></div>
+      <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Genuine Fabric</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Bridal Wear<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Salwar Suits<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Lehengas<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Kurtis<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Dupattas<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Embroidery<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Festive Wear<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Bridal Lehenga<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Bridal Wear<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Salwar Suits<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Lehengas<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Kurtis<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Dupattas<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Embroidery<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Festive Wear<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Bridal Lehenga<span class="marquee-dot">✦</span></span>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section id="categories">
+  <div class="reveal">
+    <p class="section-label">Browse by Category</p>
+    <h2 class="section-title">Our <em>Collections</em></h2>
+    <div class="divider"></div>
+  </div>
+  <div class="categories-grid">
+    <div class="cat-card reveal"><div class="card-bg"></div><span class="cat-icon">💍</span><div class="cat-name">Bridal</div><div class="cat-desc">Lehenga · Sharara · Anarkali</div></div>
+    <div class="cat-card reveal"><div class="card-bg"></div><span class="cat-icon">👘</span><div class="cat-name">Salwar Suits</div><div class="cat-desc">Anarkali · Palazzo · Straight</div></div>
+    <div class="cat-card reveal"><div class="card-bg"></div><span class="cat-icon">✨</span><div class="cat-name">Lehengas</div><div class="cat-desc">Bridal · Party · Festive</div></div>
+    <div class="cat-card reveal"><div class="card-bg"></div><span class="cat-icon">🌸</span><div class="cat-name">Kurtis</div><div class="cat-desc">Casual · Embroidered · Printed</div></div>
+    <div class="cat-card reveal"><div class="card-bg"></div><span class="cat-icon">🪡</span><div class="cat-name">Dupattas</div><div class="cat-desc">Hand-embroidered · Block Print</div></div>
+  </div>
+</section>
+
+<!-- BRIDAL -->
+<section id="bridal">
+  <div class="reveal">
+    <p class="section-label">✦ The Most Special Day ✦</p>
+    <h2 class="section-title">Bridal <em>Collections</em></h2>
+    <div class="divider"></div>
+    <p class="bridal-intro">Step into your dream wedding with our exclusive bridal range — where every stitch tells a story of love, heritage, and breathtaking beauty.</p>
+  </div>
+  <div class="bridal-showcase reveal">
+    <!-- HERO BRIDAL CARD — click opens modal -->
+    <div class="bridal-hero-card" id="bridalHeroCard" onclick="openBridalModal()">
+      <div class="bridal-card-emoji">👰</div>
+      <div class="bridal-card-inner">
+        <span class="bridal-card-tag">Signature Piece · Click to View</span>
+        <div class="bridal-card-name">Grand Bridal<br>Lehenga Set</div>
+        <div class="bridal-card-price">Starting from <strong>₹12,999</strong></div>
+        <div style="margin-top:1rem;display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase">👆 Tap to explore</div>
+      </div>
+    </div>
+    <div class="bridal-small-card"><div class="bridal-card-emoji" style="font-size:3rem;top:35%">🌹</div><div class="bridal-card-inner"><span class="bridal-card-tag">Most Loved</span><div class="bridal-card-name">Sharara Suit</div><div class="bridal-card-price">From <strong>₹8,499</strong></div></div></div>
+    <div class="bridal-small-card"><div class="bridal-card-emoji" style="font-size:3rem;top:35%">💫</div><div class="bridal-card-inner"><span class="bridal-card-tag">New Arrival</span><div class="bridal-card-name">Anarkali Gown</div><div class="bridal-card-price">From <strong>₹6,999</strong></div></div></div>
+  </div>
+  <div class="ornament reveal">❧ ✦ ❧</div>
+  <div class="bridal-features reveal">
+    <div class="bridal-feat"><div class="bridal-feat-icon">🧵</div><div class="bridal-feat-title">Zardozi Embroidery</div><div class="bridal-feat-text">Hand-done gold & silver thread work by master artisans</div></div>
+    <div class="bridal-feat"><div class="bridal-feat-icon">💎</div><div class="bridal-feat-title">Stone & Sequin Work</div><div class="bridal-feat-text">Premium kundan, mirror & sequin detailing on every piece</div></div>
+    <div class="bridal-feat"><div class="bridal-feat-icon">👗</div><div class="bridal-feat-title">Custom Fitting</div><div class="bridal-feat-text">Tailored to your exact measurements for the perfect fit</div></div>
+    <div class="bridal-feat"><div class="bridal-feat-icon">📦</div><div class="bridal-feat-title">Bridal Box Delivery</div><div class="bridal-feat-text">Luxury packaging — your lehenga arrives like a gift</div></div>
+  </div>
+  <div style="text-align:center;margin-top:3rem" class="reveal">
+    <a href="https://natkhat.com" class="btn btn-gold">View Full Bridal Collection</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════ BRIDAL PRODUCT MODAL ══════════════════════════ -->
+<div class="modal-overlay" id="bridalModal" onclick="closeBridalModalOutside(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeBridalModal()">✕</button>
+
+    <!-- Gallery -->
+    <div class="modal-gallery">
+      <div id="modalMainImg" class="modal-main-img emoji-display">👰</div>
+      <div class="modal-thumbs" id="modalThumbs">
+        <div class="modal-thumb active" onclick="setThumb(this,'👰','emoji')">👰</div>
+        <div class="modal-thumb" onclick="setThumb(this,'✨','emoji')">✨</div>
+        <div class="modal-thumb" onclick="setThumb(this,'💍','emoji')">💍</div>
+        <div class="modal-thumb" onclick="setThumb(this,'🌹','emoji')">🌹</div>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="modal-info">
+      <span class="modal-tag">Bridal Collection · Signature</span>
+      <h2 class="modal-name">Grand Bridal Lehenga Set</h2>
+      <div class="modal-price">₹12,999 <s>₹18,000</s></div>
+      <p class="modal-desc">A showstopping bridal lehenga crafted with intricate zardozi embroidery, handwoven silk fabric, and a flowing dupatta adorned with gota patti border. Perfect for your most special day.</p>
+      <div class="modal-details">
+        <div class="modal-detail-item"><span>Fabric</span>Pure Silk + Net</div>
+        <div class="modal-detail-item"><span>Work</span>Zardozi · Sequins · Stone</div>
+        <div class="modal-detail-item"><span>Includes</span>Lehenga + Choli + Dupatta</div>
+        <div class="modal-detail-item"><span>Delivery</span>7–10 Business Days</div>
+        <div class="modal-detail-item"><span>Customisation</span>Available on Request</div>
+        <div class="modal-detail-item"><span>Colours</span>Red · Maroon · Blush</div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" style="width:100%;text-align:center">Add to Cart</button>
+        <a class="modal-whatsapp" href="https://wa.me/919999999999?text=Hi%20Natkhat%20Nx!%20I%20am%20interested%20in%20the%20Grand%20Bridal%20Lehenga%20Set%20(₹12,999).%20Please%20share%20more%20details." target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Order via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED / NEW ARRIVALS -->
+<section id="featured">
+  <div class="featured-header reveal">
+    <div>
+      <p class="section-label">Just Arrived</p>
+      <h2 class="section-title">New <em>Arrivals</em></h2>
+      <div class="divider"></div>
+    </div>
+    <a href="https://natkhat.com" class="btn btn-outline">View All</a>
+  </div>
+
+  <!-- Products grid — rendered by JS -->
+  <div class="products-grid" id="productsGrid"></div>
+
+  <!-- ── UPLOAD PANEL ── -->
+  <div id="upload-panel" class="reveal">
+    <div class="upload-panel-title">📸 Add New Arrival</div>
+    <div class="upload-panel-sub">Upload a product photo and it will appear instantly in New Arrivals above.</div>
+    <div class="upload-form">
+      <input type="text" id="upName" placeholder="Product name" />
+      <input type="text" id="upPrice" placeholder="Price e.g. ₹1,999" />
+      <input type="text" id="upOldPrice" placeholder="Old price (optional)" />
+      <label class="upload-file-label">
+        📁 Choose Photo
+        <input type="file" id="file-input" accept="image/*" onchange="previewFile(event)"/>
+      </label>
+      <button class="btn btn-primary" onclick="uploadProduct()" style="padding:.7rem 1.6rem;font-size:.78rem">Add Product</button>
+    </div>
+    <div class="upload-preview" id="uploadPreview"></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="reveal" style="text-align:center">
+    <p class="section-label">Why Choose Us</p>
+    <h2 class="section-title">Crafted with <em>Love</em></h2>
+    <div class="divider" style="margin:1.5rem auto"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-item reveal"><span class="why-icon">🧵</span><div class="why-title">Handpicked Quality</div><div class="why-text">Every piece is carefully sourced from skilled artisans and trusted weavers across India.</div></div>
+    <div class="why-item reveal"><span class="why-icon">🚚</span><div class="why-title">Fast Delivery</div><div class="why-text">Swift pan-India shipping with secure packaging so your outfit arrives in perfect condition.</div></div>
+    <div class="why-item reveal"><span class="why-icon">💎</span><div class="why-title">Premium Fabrics</div><div class="why-text">Silk, georgette, chanderi, cotton — only genuine, skin-friendly fabrics make it to our store.</div></div>
+    <div class="why-item reveal"><span class="why-icon">🔄</span><div class="why-title">Easy Returns</div><div class="why-text">Hassle-free 7-day returns. Your satisfaction is our promise, no questions asked.</div></div>
+  </div>
+</section>
