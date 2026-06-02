@@ -170,7 +170,7 @@
     .add-btn{display:block;width:100%;margin-top:1rem;padding:.7rem;text-align:center;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;background:transparent;border:1.5px solid var(--rose);color:var(--rose);cursor:pointer;transition:all .25s;font-family:'DM Sans',sans-serif}
     .add-btn:hover{background:linear-gradient(135deg,var(--rose),var(--plum));color:#fff;border-color:transparent}
     .product-delete{display:block;width:100%;margin-top:.4rem;padding:.4rem;text-align:center;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;background:transparent;border:1px solid #e0c0c0;color:#c08080;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
-    .product-delete:hover{background:#fff0f0;border
+    .product-delete:hover{background:#fff0f0;border-var(--rose)
 
     /* ══ UPLOAD PANEL ══ */
     #upload-panel{background:linear-gradient(135deg,#fef5ee,#f5e8f5);border:2px dashed var(--border);padding:2.5rem;margin-top:3rem;text-align:center;transition:border-color .3s}
@@ -432,3 +432,210 @@
     <div class="why-item reveal"><span class="why-icon">🔄</span><div class="why-title">Easy Returns</div><div class="why-text">Hassle-free 7-day returns. Your satisfaction is our promise, no questions asked.</div></div>
   </div>
 </section>
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="reveal" style="text-align:center">
+    <p class="section-label">Happy Customers</p>
+    <h2 class="section-title">They <em>Love</em> Us</h2>
+    <div class="divider" style="margin:1.5rem auto;background:linear-gradient(90deg,var(--gold),var(--rose))"></div>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal"><div class="stars">★★★★★</div><div class="testi-text">My bridal lehenga from Natkhat Nx was absolutely stunning. The embroidery was flawless and I felt like a queen on my wedding day!</div><div class="testi-author">— Priya S., Mumbai</div></div>
+    <div class="testi-card reveal"><div class="stars">★★★★★</div><div class="testi-text">Ordered a bridal lehenga for my sister's wedding and we were blown away by the quality. Delivered on time and beautifully packed. Highly recommend!</div><div class="testi-author">— Neha R., Delhi</div></div>
+    <div class="testi-card reveal"><div class="stars">★★★★★</div><div class="testi-text">The embroidered kurti is so pretty and comfortable for daily wear. Amazing value for money. Will definitely shop again!</div><div class="testi-author">— Anjali K., Ahmedabad</div></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="newsletter-box reveal">
+    <p class="section-label">Stay Updated</p>
+    <h2 class="section-title">Get <em>Exclusive</em> Offers</h2>
+    <div class="divider" style="margin:1.2rem auto"></div>
+    <p>Subscribe to receive bridal lookbook drops, new arrival alerts, festive deals, and styling tips straight to your inbox.</p>
+    <div class="nl-form">
+      <input type="email" placeholder="Your email address"/>
+      <button class="btn btn-primary">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">Natkhat <span>Nx</span></div>
+      <div class="footer-tagline">Women's Ethnic Wear Boutique<br>Celebrating the art of Indian fashion.</div>
+    </div>
+    <div class="footer-col"><h4>Shop</h4><ul>
+      <li><a href="#">Bridal Collection</a></li>
+      <li><a href="#">Salwar Suits</a></li>
+      <li><a href="#">Lehengas</a></li>
+      <li><a href="#">Kurtis</a></li>
+      <li><a href="#">Dupattas</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Help</h4><ul>
+      <li><a href="#">Size Guide</a></li>
+      <li><a href="#">Shipping Policy</a></li>
+      <li><a href="#">Returns</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul>
+      <li><a href="https://natkhat.com">natkhat.com</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">WhatsApp</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Natkhat Nx. All rights reserved.</span>
+    <span>Made with ♥ for Indian fashion lovers</span>
+  </div>
+</footer>
+
+<script>
+/* ════════════════════════════════
+   SCROLL REVEAL
+════════════════════════════════ */
+const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ════════════════════════════════
+   BRIDAL MODAL
+════════════════════════════════ */
+function openBridalModal(){
+  document.getElementById('bridalModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeBridalModal(){
+  document.getElementById('bridalModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeBridalModalOutside(e){
+  if(e.target===document.getElementById('bridalModal')) closeBridalModal();
+}
+function setThumb(el, src, type){
+  document.querySelectorAll('.modal-thumb').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  const main = document.getElementById('modalMainImg');
+  if(type==='emoji'){
+    main.className='modal-main-img emoji-display';
+    main.textContent=src;
+    main.src='';
+  } else {
+    main.className='modal-main-img';
+    main.innerHTML='';
+    main.src=src;
+  }
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closeBridalModal()});
+
+/* ════════════════════════════════
+   NEW ARRIVALS — localStorage
+════════════════════════════════ */
+const DEFAULT_PRODUCTS=[
+  {id:'p1',name:'Bridal Lehenga Set',price:'₹7,999',oldPrice:'₹10,500',badge:'Bestseller',badgeClass:'badge-plum',img:null,emoji:'✨',bg:'pi-1'},
+  {id:'p2',name:'Anarkali Suit',price:'₹1,899',oldPrice:'₹2,500',badge:'Trending',badgeClass:'badge-rose',img:null,emoji:'👘',bg:'pi-2'},
+  {id:'p3',name:'Embroidered Kurti',price:'₹899',oldPrice:'₹1,200',badge:'New',badgeClass:'badge-gold',img:null,emoji:'🌸',bg:'pi-3'},
+  {id:'p4',name:'Sharara Set',price:'₹5,499',oldPrice:'₹7,000',badge:'Bridal',badgeClass:'badge-plum',img:null,emoji:'💍',bg:'pi-4'},
+];
+
+function getProducts(){
+  try{
+    const saved=localStorage.getItem('nn_products');
+    return saved ? JSON.parse(saved) : DEFAULT_PRODUCTS;
+  }catch(e){return DEFAULT_PRODUCTS;}
+}
+function saveProducts(prods){
+  try{localStorage.setItem('nn_products',JSON.stringify(prods));}catch(e){}
+}
+
+function renderProducts(){
+  const grid=document.getElementById('productsGrid');
+  const prods=getProducts();
+  grid.innerHTML=prods.map(p=>`
+    <div class="product-card reveal" id="card-${p.id}">
+      <div class="product-img ${p.bg}">
+        ${p.img
+          ? `<img src="${p.img}" alt="${p.name}">`
+          : `<span class="emoji-fallback">${p.emoji}</span>`}
+        <div class="product-badge ${p.badgeClass}">${p.badge}</div>
+      </div>
+      <div class="product-info">
+        <div class="product-name">${p.name}</div>
+        <div class="product-price">${p.price}${p.oldPrice?` <s>${p.oldPrice}</s>`:''}</div>
+        <button class="add-btn">Add to Cart</button>
+        <button class="product-delete" onclick="deleteProduct('${p.id}')">✕ Remove</button>
+      </div>
+    </div>
+  `).join('');
+  // re-observe new cards
+  grid.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+
+function deleteProduct(id){
+  if(!confirm('Remove this product from New Arrivals?')) return;
+  const prods=getProducts().filter(p=>p.id!==id);
+  saveProducts(prods);
+  renderProducts();
+}
+
+/* ── Upload ── */
+let pendingFileData=null;
+
+function previewFile(e){
+  const file=e.target.files[0];
+  if(!file) return;
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    pendingFileData=ev.target.result;
+    document.getElementById('uploadPreview').innerHTML=
+      `<div>Preview:</div><img src="${pendingFileData}" alt="preview"/>`;
+  };
+  reader.readAsDataURL(file);
+}
+
+function uploadProduct(){
+  const name=(document.getElementById('upName').value||'').trim();
+  const price=(document.getElementById('upPrice').value||'').trim();
+  const oldPrice=(document.getElementById('upOldPrice').value||'').trim();
+  if(!name){alert('Please enter a product name.');return;}
+  if(!price){alert('Please enter a price.');return;}
+  if(!pendingFileData){alert('Please choose a photo.');return;}
+
+  const bgs=['pi-1','pi-2','pi-3','pi-4'];
+  const badges=['New','Trending','Bestseller','Just In'];
+  const bclass=['badge-rose','badge-plum','badge-gold','badge-rose'];
+  const idx=Math.floor(Math.random()*4);
+
+  const newProd={
+    id:'p'+Date.now(),
+    name,price,oldPrice,
+    badge:badges[idx],badgeClass:bclass[idx],
+    img:pendingFileData,emoji:'🌸',bg:bgs[idx]
+  };
+
+  const prods=getProducts();
+  prods.unshift(newProd); // add at top
+  saveProducts(prods);
+  renderProducts();
+
+  // reset form
+  document.getElementById('upName').value='';
+  document.getElementById('upPrice').value='';
+  document.getElementById('upOldPrice').value='';
+  document.getElementById('file-input').value='';
+  document.getElementById('uploadPreview').innerHTML='<span style="color:var(--rose)">✓ Product added to New Arrivals!</span>';
+  pendingFileData=null;
+  setTimeout(()=>{document.getElementById('uploadPreview').innerHTML='';},3000);
+
+  // scroll to grid
+  document.getElementById('productsGrid').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// Initial render
+renderProducts();
+</script>
+</body>
+</html>
